@@ -6,6 +6,31 @@
   justify-content: center;
   align-items: center;
 }
+.header{
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4;
+}
+.brand {
+  margin: 1rem;
+}
+
+.nav a {
+  margin-right: 2rem;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.hero {
+  background: url('../public/hero.png') center;
+  background-size: contain;
+  padding-top: 24.5%;
+  width: 100%;
+}
 
 .main {
   padding: 5rem 0;
@@ -16,61 +41,24 @@
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.new {
+  background: -webkit-linear-gradient(to right , #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 16px;
+  padding: 2rem;
+  color: #fff;
+  max-width: 900px;
+  margin: 1rem;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.new p {
+  font-size: 2rem;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.new a {
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 .grid {
   display: flex;
   align-items: center;
@@ -87,8 +75,7 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 1px solid #000;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -108,6 +95,29 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.card p.price {
+  font-weight: 700;
+}
+.card span.pill {
+  display: grid;
+  width: fit-content;
+  padding: .2rem .4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4;
+  color: #fff;
+  background-color: #0070f3;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card p.parcelas {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .logo {

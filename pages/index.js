@@ -1,65 +1,53 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
+import Produtos from '../public/data.js'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>ALQUIMIA PHARMA NUTRITION</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Header />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.hero}>
+          <img src="../public/hero.png" alt=""/>
+        </div>
 
+        <main className={styles.main}>
+
+        <div className={styles.new}>
+          <h1>Estamos mudando…</h1>
+          <p>Nossa loja vai mudar.</p>
+          <p>Enquanto preparamos tudo para você ter a melhor experiência e continuar dentro dos seus objetivos, você pode falar com a gente pelos nossos canais de contato:</p>
+          <p> Telefone: (47) 2033-0141 <a href=""></a></p>
+          <p> <a href="https://api.whatsapp.com/send?phone=554720330141">Whatsapp: (47) 2033-0141</a></p>
+          <p><a href="mailto:contato@alquimiamanipulacao.com.br">E-mail: contato@alquimiamanipulacao.com.br</a></p>
+        </div>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          {Produtos.map((produto) => {
+            return <Link href={`produtos/${produto.Slug}`}>
+              <a className={styles.card}>
+                <span className={styles.pill}>{produto.Tipo}</span>
+                <Image src={`/produtos_img/${produto.Slug}.png`} width={200} height={200} />
+                <h3>{produto.Nome}</h3>
+                <p className={styles.price}>R$ {produto.Preco}</p>
+                <p className={styles.parcelas}>Em até {produto.Parcelas}X de R$ {Math.round(produto.Preco/produto.Parcelas * 100 + Number.EPSILON)/100}</p>
+                <button>Mais informações…</button>
+              </a>
+            </Link>
+            })
+          }
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
