@@ -27,6 +27,7 @@ const Footer = () => {
           <h2>Horário de Atendimento</h2>
           <p>seg à sex - 8h00 às 19h00</p>
           <p>sab - 8h00 às 13h00</p>
+          <h2><a href="/legal">Registros</a></h2>
         </div>
         <div className={styles.item}>
           <Image src="/logo.png" width={150} height={32} />

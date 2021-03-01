@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const About = () => {
   return (
-  <div>
+  <div className="container">
     <Head>
       <title>Sobre a ALQUIMIA PHARMA NUTRITION</title>
         <link rel="icon" href="/favicon.ico" />

@@ -30,3 +30,8 @@
 .link {
   text-align: center;
 }
+@media (max-width: 740px) {
+  .tease {
+    flex-direction: column;
+  }
+}

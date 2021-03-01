@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>ALQUIMIA PHARMA NUTRITION</title>
         <link rel="icon" href="/favicon.ico" />

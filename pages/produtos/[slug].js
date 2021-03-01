@@ -15,7 +15,7 @@ const produtoPage = () => {
   })
   console.log(single)
   return (
-  <div className={styles.container} >
+  <div className="container" >
     <Head>
       <title>{slug}</title>
       <link rel="icon" href="/favicon.ico" />

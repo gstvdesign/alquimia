@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const Legal = () => {
-  return <div>
+  return <div className="container">
     <Head>
       <title>ALQUIMIA PHARMA NUTRITION</title>
       <link rel="icon" href="/favicon.ico" />

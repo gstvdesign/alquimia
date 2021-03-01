@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Header.module.css'
 import Image from 'next/image'
 import {FiShoppingCart} from 'react-icons/fi'
 
@@ -12,7 +12,6 @@ const Header = () => {
           <div className={styles.nav}>
             <a href="/"> <FiShoppingCart /> Principais produtos</a>
             <a href="/about">Sobre nós</a>
-            <a href="/legal">Registros</a>
           </div>
   </div>
 }
